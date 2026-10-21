@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naninuttt 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Cormorant+Garamond:wght@400;500&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- PETALS CONTAINER -->
+    <div id="petals-container"></div>
+
+    <!-- AUDIO BACKSOUND -->
+    <audio id="bgMusic" onended="playNextTrack()">
+        <source id="musicSource" src="lagu1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- TOMBOL KONTROL MUSIK -->
+    <button id="musicToggle" class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <!-- OPENING -->
+    <main class="section opening active">
+        <div class="content">
+            <p class="small-text">A little surprise for you...</p>
+            <h1>Happy Birthday</h1>
+            <p class="name">Naninuttt</p>
+            <p class="subtitle">For someone who means the world to me 💗</p>
+            <button onclick="startSurprise()">Open Your Surprise ✨</button>
+        </div>
+    </main>
+
+    <!-- BIRTHDAY -->
+    <section class="section birthday">
+        <div class="birthday-content">
+            <p class="small-text">Today is a special day...</p>
+            <h2>Happy Birthday 🎂</h2>
+            <p class="birthday-text">This little website was made especially for you.</p>
+            <button onclick="showSection('menu-section')">Continue ✨</button>
+        </div>
+    </section>
+
+    <!-- DASHBOARD MENU -->
+    <section class="section menu-section">
+        <div class="menu-container">
+            <p class="small-text">Choose what you want to open 💗</p>
+            <h2 class="menu-title">Special Choices</h2>
+
+            <div class="menu-grid">
+                <div class="menu-card" onclick="showSection('letter')">
+                    <div class="card-icon">💌</div>
+                    <h3>Surat</h3>
+                    <p>A little letter written for you</p>
+                </div>
+
+                <div class="menu-card" onclick="showSection('memories')">
+                    <div class="card-icon">📸</div>
+                    <h3>Photo</h3>
+                    <p>Some precious moments to remember</p>
+                </div>
+
+                <div class="menu-card" onclick="showSection('game-hub')">
+                    <div class="card-icon">🎮</div>
+                    <h3>Game</h3>
+                    <p>Fun birthday mini games just for you!</p>
+                </div>
+            </div>
+
+            <button class="next-btn" onclick="showSection('wish-section')">Lanjut ke Penutup ✨ ➡</button>
+        </div>
+    </section>
+
+    <!-- SURAT (LETTER) -->
+    <section class="section letter">
+        <div class="letter-paper">
+            <div class="letter-header">
+                <span class="envelope-stamp">💌</span>
+                <p class="small-text">A LITTLE LETTER FOR YOU</p>
+                <h2>Dear Naninutt,</h2>
+            </div>
+
+            <div class="letter-body">
+                <p class="letter-text">
+                    Happy birthday to you. 💗 Today is your special day, and I just want you to know how grateful I am that someone as wonderful as you exists. Maybe sometimes you don't realize how much your presence can mean to someone, but I hope you know that you are truly special in your own way.
+                </p>
+                <p class="letter-text">
+                    I hope this new chapter of your life brings you so many beautiful things. I hope you get more reasons to smile, more moments that make your heart feel warm, and more memories that you'll look back on someday with a big smile. I hope the things you've been wishing for slowly find their way to you, one by one.
+                </p>
+                <p class="letter-text">
+                    And when life doesn't go the way you want it to, I hope you remember that it's okay to slow down. It's okay to have bad days, to feel tired, and to not have everything figured out yet. You don't always have to be strong. Just keep going at your own pace, because you're doing better than you probably realize.
+                </p>
+                <p class="letter-text">
+                    Thank you for all the little things that make you, you. Your smile, your way of talking, the little things you do without thinking, and all those moments that might seem ordinary but somehow become memorable. Those little things are exactly what make someone unforgettable.
+                </p>
+                <p class="letter-text">
+                    On your birthday, I don't just wish you happiness for today. I wish that happiness follows you throughout this entire year. I hope you meet people who appreciate you, find places where you feel comfortable being yourself, and experience moments that make you think, "I'm really glad I got to live this."
+                </p>
+                <p class="letter-text">
+                    So, Naninutt, enjoy your day. Laugh as much as you can, eat something you love, make some good memories, and don't forget to appreciate how far you've come. You deserve good things, not only today, but every day that comes after this.
+                </p>
+                <p class="letter-text">
+                    Once again, happy birthday. 🎂💗 I hope this little website can become one small memory that makes you smile whenever you see it again. And wherever this year takes you, I hope it takes you somewhere beautiful.
+                </p>
+            </div>
+
+            <div class="letter-footer">
+                <p class="letter-sign">
+                    With love,<br>
+                    <span>Someone who cares about you 💗</span>
+                </p>
+                <button type="button" onclick="showSection('menu-section')">⬅ Kembali ke Menu Utama</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO (MEMORIES) -->
+    <section class="section memories">
+        <div class="memories-content">
+            <p class="small-text">A few moments to remember 📸</p>
+            <h2>Little Memories</h2>
+            <p class="memories-text">
+                Setiap momen bersamamu selalu jadi kenangan manis yang paling berharga. 💗
+            </p>
+
+            <div class="memory-grid-5">
+                <div class="memory-card">
+                    <div class="memory-photo">
+                        <img src="foto1.jpeg" alt="Memory 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="photo-placeholder" style="display:none;">Foto 1 📷</span>
+                    </div>
+                    <p>Momen manis yang selalu bikin aku senyum sendiri pas ngingetnya. ✨</p>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-photo">
+                        <img src="foto2.jpeg" alt="Memory 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="photo-placeholder" style="display:none;">Foto 2 📷</span>
+                    </div>
+                    <p>Terima kasih udah selalu jadi alasan dan tawa paling hangat di hari-hariku. 🌸</p>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-photo">
+                        <img src="foto3.jpeg" alt="Memory 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="photo-placeholder" style="display:none;">Foto 3 📷</span>
+                    </div>
+                    <p>Sederhana, tapi pas sama kamu semuanya terasa jauh lebih spesial. 💖</p>
+                </div>
+
+                <div class="memory-card card-bottom">
+                    <div class="memory-photo">
+                        <img src="foto4.jpeg" alt="Memory 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="photo-placeholder" style="display:none;">Foto 4 📷</span>
+                    </div>
+                    <p>Semoga bahagia dan indahnya hari ini bakal terus meluk kamu selamanya. 🎂</p>
+                </div>
+
+                <div class="memory-card card-bottom">
+                    <div class="memory-photo">
+                        <img src="foto5.jpeg" alt="Memory 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="photo-placeholder" style="display:none;">Foto 5 📷</span>
+                    </div>
+                    <p>Senyum favoritku, selamat ulang tahun ya Naninuttt cantiii! 💗✨</p>
+                </div>
+            </div>
+
+            <br><br>
+            <button onclick="showSection('menu-section')">⬅ Kembali ke Menu Utama</button>
+        </div>
+    </section>
+
+    <!-- GAME HUB SECTION -->
+    <section class="section game-hub">
+        <div class="game-container">
+            <p class="small-text">Birthday Arcade 🎮</p>
+            <h2 class="menu-title">Pick a Mini Game</h2>
+
+            <div class="game-sub-nav">
+                <button class="sub-tab active" onclick="switchGame('catch')">Catch Hearts 🎈</button>
+                <button class="sub-tab" onclick="switchGame('memory')">Memory Match 🎴</button>
+                <button class="sub-tab" onclick="switchGame('scratch')">Scratch Surprise 🎟️</button>
+            </div>
+
+            <!-- GAME 1: BIKIN BUNGA (BOUQUET MAKER) -->
+            <div id="game-catch-wrapper" class="game-view active">
+                <p class="game-instruction">Rangkai buket bunga spesial pilihanmu! 🌸✨</p>
+                
+                <div class="bouquet-builder">
+                    <div class="bouquet-display">
+                        <div class="bouquet-stage" id="bouquetStage">
+                            <div class="wrapper-cone"></div>
+                            <div class="flowers-layer" id="flowersContainer">
+                                <span class="placeholder-text">Pilih bunga di bawah untuk merangkai buket ✨</span>
+                            </div>
+                            <div class="ribbon-knot" id="ribbonDisplay">🎀</div>
+                        </div>
+                    </div>
+
+                    <div class="builder-controls">
+                        <p class="control-label">Pilih Bunga Bertangkai (Maksimal 5):</p>
+                        <div class="option-buttons">
+                            <button type="button" onclick="addFlower('🌹', '#ff3366')">🌹 Mawar Red</button>
+                            <button type="button" onclick="addFlower('🌷', '#ff66b2')">🌷 Tulip Pink</button>
+                            <button type="button" onclick="addFlower('🌻', '#ffcc00')">🌻 Matahari</button>
+                            <button type="button" onclick="addFlower('🌸', '#ffb3d9')">🌸 Cherry</button>
+                            <button type="button" onclick="addFlower('🌺', '#ff4d94')">🌺 Hibiscus</button>
+                        </div>
+
+                        <p class="control-label">Pilih Pita & Pembungkus:</p>
+                        <div class="option-buttons">
+                            <button type="button" onclick="changeRibbon('🎀', 'pink')">🎀 Soft Pink</button>
+                            <button type="button" onclick="changeRibbon('🎗️', 'gold')">🎗️ Elegance Gold</button>
+                            <button type="button" onclick="changeRibbon('🎁', 'red')">🎁 Classic Red</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bouquet-actions">
+                    <button type="button" onclick="resetBouquet()">Reset 🔄</button>
+                    <button type="button" onclick="finishBouquet()" class="save-bouquet-btn">Simpan Buket ✨</button>
+                </div>
+            </div>
+
+            <!-- GAME 2: MEMORY MATCH -->
+            <div id="game-memory-wrapper" class="game-view">
+                <p class="game-instruction">Buka & cocokkan semua kartu cinta di bawah ini!</p>
+                <div class="game-stats">
+                    <span>Langkah: <strong id="memory-moves">0</strong></span>
+                    <span>Pasangan: <strong id="memory-matches">0 / 6</strong></span>
+                </div>
+                <div class="memory-board" id="memoryBoard"></div>
+                <button onclick="initMemoryGame()">Acak & Reset 🔄</button>
+            </div>
+
+            <!-- GAME 3: SCRATCH SURPRISE -->
+            <div id="game-scratch-wrapper" class="game-view">
+                <p class="game-instruction">Gosok area perak di bawah ini memakai mouse / jarimu untuk melihat hadiah kejutan!</p>
+                <div class="scratch-container">
+                    <div class="scratch-reward">
+                        <h3>🎉 VIP Birthday Ticket Pass! 🎉</h3>
+                        <p>Kupon ini berlaku untuk:</p>
+                        <p class="reward-highlight">"1 Hari Bebas Minta Apa Saja & Makan Makanan Favoritmu! 🍨✨"</p>
+                        <span class="reward-code">CODE: NANINUTT-BEST-GIRL-2026</span>
+                    </div>
+                    <canvas id="scratchCanvas" width="340" height="220"></canvas>
+                </div>
+                <button onclick="initScratchGame()">Tutup & Gosok Lagi 🎟️</button>
+            </div>
+
+            <br>
+            <button onclick="showSection('menu-section')">⬅ Kembali ke Menu Utama</button>
+        </div>
+    </section>
+
+    <!-- SECTION 1: MAKE A WISH -->
+    <section class="section wish-section">
+        <div class="wish-content">
+            <div class="wish-star-icon">🌟</div>
+            <p class="small-text">MAKE A WISH 💖</p>
+            <h2>Tulis Harapanmu Hari Ini</h2>
+            <p class="wish-subtitle">Tuliskan semua doa, impian, dan harapan terbesarmu di bawah ini ya!</p>
+
+            <div class="wish-box-container">
+                <textarea id="userWish" placeholder="Ketik harapan dan doamu di sini... ✨" rows="4"></textarea>
+                <button type="button" onclick="sendWish()" class="send-wish-btn">Kirim Harapan ke Bintang 🌟</button>
+            </div>
+
+            <button type="button" onclick="showSection('menu-section')" style="margin-top: 25px;">⬅ Kembali ke Menu Utama</button>
+        </div>
+    </section>
+
+    <!-- SECTION 2: BLOW THE CANDLE (PAGE KHUSUS TIUP LILIN) -->
+    <section class="section candle-section">
+        <div class="wish-content">
+            <p class="small-text">TIME TO BLOW THE CANDLE 🕯️</p>
+            <h2>Make a Wish & Blow!</h2>
+            <p class="wish-subtitle">Klik kue ulang tahun di bawah ini untuk meniup lilinnya! ✨</p>
+
+            <div class="candle-wrapper" onclick="blowCandle()">
+                <div class="cake-big" id="cakeGraphic">🎂</div>
+                <p id="candleStatusText" class="candle-status">Klik kue untuk tiup lilin 🕯️</p>
+            </div>
+
+            <button type="button" onclick="showSection('menu-section')" style="margin-top: 25px;">⬅ Kembali ke Menu Utama</button>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEMUA POPUP MODAL (DITARUH DI LUAR SECTION)
+         ========================================== -->
+    
+    <!-- POP-UP MODAL KARTU UCAPAN BUKET -->
+    <div id="bouquetModal" class="bouquet-modal">
+        <div class="modal-card">
+            <span class="close-modal" onclick="closeBouquetModal()">&times;</span>
+            <div class="modal-icon">💐</div>
+            <h3>Buket Bunga Spesial Selesai!</h3>
+            <div class="modal-bouquet-card" id="modalBouquetPreview"></div>
+            <p class="modal-text">"Bunga-bunga indah ini khusus dirangkai manis untuk merayakan hari spesialmu, Naninuttt tercinta! 💗✨"</p>
+            <button type="button" onclick="closeBouquetModal()">Terima Buket 💖</button>
+        </div>
+    </div>
+
+    <!-- POP-UP MODAL KEMENANGAN MEMORY MATCH -->
+    <div id="memoryModal" class="bouquet-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🎉🎴</div>
+            <h3>Hebat Banget!</h3>
+            <p class="modal-text">"Kamu berhasil mencocokkan semua kartu cinta dengan sempurna! Naninuttt emang jagoan! 💗✨"</p>
+            <button type="button" onclick="closeMemoryModal()">Lanjut Main 💖</button>
+        </div>
+    </div>
+
+    <!-- POPUP JIKA KOLOM WISH KOSONG -->
+    <div id="emptyWishModal" class="bouquet-modal">
+        <div class="modal-card">
+            <div class="modal-icon">✍️✨</div>
+            <h3>Harapan Masih Kosong!</h3>
+            <p class="modal-text">"Tuliskan dulu doa dan harapan terbesarmu di kolom teks sebelum dikirim ke bintang yaa! 💗"</p>
+            <button type="button" onclick="closeEmptyWishModal()">Oke, Tulis Sekarang ✏️</button>
+        </div>
+    </div>
+
+    <!-- POPUP HARAPAN TERKIRIM -->
+    <div id="wishModal" class="bouquet-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🌟✨</div>
+            <h3>Harapanmu Terkirim!</h3>
+            <p class="modal-text">"Semoga semua doa, impian, dan harapan yang kamu tuliskan hari ini dikabulkan satu per satu oleh-Nya. Sekarang, saatnya tiup lilinmu! 🎂✨"</p>
+            <button type="button" onclick="goToCandlePage()">Lanjut Tiup Lilin 🎂 ➡</button>
+        </div>
+    </div>
+
+    <!-- POPUP FINAL KETIKA LILIN DITIUP -->
+    <div id="candleModal" class="bouquet-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🎉🎂✨</div>
+            <h3>Happy Birthday, Naninuttt!</h3>
+            <p class="modal-text">"Lilinnya sudah ditiup! Semoga tahun ini membawa sejuta kebahagiaan, kesehatan, dan senyuman indah buat kamu selamanya! 💗🌸"</p>
+            <button type="button" onclick="finishAllExperience()">Selesai & Replay 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
